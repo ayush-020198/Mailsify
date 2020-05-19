@@ -25,6 +25,8 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
+const path = require('path');
+
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 

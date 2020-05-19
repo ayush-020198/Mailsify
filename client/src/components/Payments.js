@@ -9,7 +9,8 @@ class Payments extends Component {
 			<StripeCheckout
 				name="Mailsify"
 				description="Payment Gateway to add credits"
-				amount={500}
+				amount={50000}
+				currency="INR"
 				token={(token) => this.props.handleToken(token)}
 				stripeKey={process.env.REACT_APP_STRIPE_KEY}
 			>

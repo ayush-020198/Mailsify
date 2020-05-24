@@ -1,7 +1,3 @@
-module.exports = survey = {
-	return (
-		<div>
-			survey.body
-		</div>
-		);
+module.exports = (survey) => {
+	return '<div>' + survey.body + '</div>';
 }

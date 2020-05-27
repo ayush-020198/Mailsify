@@ -1,18 +1,17 @@
 import React from 'react';
-
-const style = {
-	fontSize: 30,
-	fontFamily: 'cursive',
-};
+import '../css/Landing.css';
 
 const Landing = () => {
 	return (
 		<div style={{ textAlign: 'center' }}>
-			<h1>Welcome to Mailsify</h1>
-			<p style={style}>
-				Get a better idea about your start-up with this awesome survey
-				website
-			</p>
+			<h1 className="welcome">
+				<strong>Welcome to</strong>
+			</h1>
+			<div class="logo">
+				<b>
+					m<span>ai</span>l<span>si</span>fy
+				</b>
+			</div>
 		</div>
 	);
 };

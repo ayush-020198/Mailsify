@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
 body {
-	background-color: #282c34;
-	color: white;
+	background-image: url('mailsify.jpg');
 	padding: 40px;
-	font-family: Arial;
-	text-align: center;
+	background: black;
+	font-size: 140px;
+	font-family: 'Mr Vampire';
+	color: white;
+	background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg);
+	background-size: cover;
+	margin: 0;
 }

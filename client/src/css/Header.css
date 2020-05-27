@@ -1,12 +1,6 @@
 .myStyle {
 	background-color: white;
-}
-
-.logo {
-	position: relative;
-	left: 350px;
-	font-size: 50px;
-	font-family: 'Alegreya', serif;
+	border-radius: 50px;
 }
 
 .credentials {
@@ -63,4 +57,15 @@
 .gbtn {
 	position: relative;
 	top: 7px;
+	border-radius: 50px;
+}
+
+.navbar-brand {
+	position: relative;
+	left: 350px;
+	top: 43px;
+	background: url('mailsify-logo.png');
+	height: 50px;
+	width: 50px;
+	background-size: cover;
 }

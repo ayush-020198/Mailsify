@@ -56,10 +56,8 @@ class Header extends Component {
 					<div className="container">
 						<Link
 							to={this.props.auth ? '/surveys' : '/'}
-							className="logo red-text brand-logo"
-						>
-							Mailsify
-						</Link>
+							className="brand-logo navbar-brand"
+						></Link>
 						<a
 							href="menu"
 							className="sidenav-trigger barnav"

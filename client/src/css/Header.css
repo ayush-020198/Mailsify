@@ -1,0 +1,62 @@
+.myStyle {
+	background-color: white;
+}
+
+.logo {
+	position: relative;
+	left: -95px;
+	font-size: 50px;
+	font-family: 'Alegreya', serif;
+	color: black;
+}
+
+.credentials {
+	position: relative;
+	left: 100px;
+	font-size: 30px;
+}
+
+.credits {
+	margin: 0 10px;
+	font-family: 'Alegreya', serif;
+	font-size: 25px;
+	font-weight: 1000;
+	color: #0345f4;
+}
+
+.signin {
+	margin: 0 10px;
+	font-family: 'Alegreya', serif;
+	font-size: 25px;
+	color: #0345f4;
+}
+
+.barnav {
+	color: #0345f4;
+}
+.loadingdiv {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25px;
+	height: 25px;
+	background: #174c4f;
+	border-radius: 20px;
+	-webkit-animation: loading 0.9s infinite alternate;
+	-moz-animation: loading 0.9s infinite alternate;
+	box-shadow: 10px 10px 10px #444444;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.loadingdiv {
+		animation: loadingdiv infinite 0.5s linear;
+	}
+}
+
+@keyframes loadingdiv {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

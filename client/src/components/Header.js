@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
+import GoogleButton from 'react-google-button';
 import '../css/Header.css';
 import '../css/buttons/component.css';
 
@@ -21,8 +22,11 @@ class Header extends Component {
 			case false:
 				return (
 					<li>
-						<a href="auth/google" className="signin">
-							Sign in With Google
+						<a href="auth/google" className="gbtn">
+							<GoogleButton
+								type="dark"
+								onClick={() => console.log('GB clicked')}
+							/>
 						</a>
 					</li>
 				);
@@ -52,7 +56,7 @@ class Header extends Component {
 					<div className="container">
 						<Link
 							to={this.props.auth ? '/surveys' : '/'}
-							className="logo black-text brand-logo"
+							className="logo red-text brand-logo"
 						>
 							Mailsify
 						</Link>

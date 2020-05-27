@@ -4,10 +4,9 @@
 
 .logo {
 	position: relative;
-	left: -95px;
+	left: 350px;
 	font-size: 50px;
 	font-family: 'Alegreya', serif;
-	color: black;
 }
 
 .credentials {
@@ -59,4 +58,9 @@
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+.gbtn {
+	position: relative;
+	top: 7px;
 }

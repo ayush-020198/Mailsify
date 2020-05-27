@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Payments from './Payments';
 import '../css/Header.css';
 import '../css/buttons/component.css';
-import '../css/buttons/default.css';
 
 class Header extends Component {
 	componentDidMount() {

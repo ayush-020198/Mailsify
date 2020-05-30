@@ -1,14 +1,16 @@
 .btn {
-	border: none;
-	font-family: Calibri;
+	font-family: 'Alegreya', serif;
 	text-transform: none;
 	font-size: inherit;
-	background: none;
 	cursor: pointer;
+	height: 50px;
+	color: black;
+	border-radius: 30px;
 	display: inline-block;
-	font-weight: 70;
+	font-weight: 700;
 	outline: none;
 	position: relative;
+	top: -5px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;

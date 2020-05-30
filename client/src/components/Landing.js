@@ -7,7 +7,7 @@ const Landing = () => {
 			<h1 className="welcome">
 				<strong>Welcome to</strong>
 			</h1>
-			<div class="logo">
+			<div className="logo">
 				<b>
 					m<span>ai</span>l<span>si</span>fy
 				</b>

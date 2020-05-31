@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import SurveyField from './SurveyField';
+import validateEmails from '../../utils/validateEmail';
 
 const FIELDS = [
 	{
@@ -46,8 +47,8 @@ class SurveyForm extends Component {
 		return (
 			<div>
 				<form
-					onSubmit={this.props.handleSubmit((values) =>
-						console.log(values)
+					onSubmit={this.props.handleSubmit(
+						this.props.onSurveySubmit
 					)}
 					style={{ position: 'relative', top: '100px' }}
 				>
@@ -76,6 +77,8 @@ function validate(values) {
 	const errors = {};
 
 	_.each(FIELDS, ({ name, noValue }) => {
+		errors.emails = validateEmails(values.emails || '');
+
 		if (!values[name]) {
 			errors[name] = noValue;
 		}

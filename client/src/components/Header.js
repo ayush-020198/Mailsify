@@ -23,7 +23,7 @@ class Header extends Component {
 			case false:
 				return (
 					<li>
-						<a href="auth/google" className="gbtn">
+						<a href="/auth/google" className="gbtn">
 							<GoogleButton
 								type="dark"
 								onClick={() => console.log('GB clicked')}
@@ -41,7 +41,7 @@ class Header extends Component {
 							Credits: {this.props.auth.credits}
 						</li>
 						<li>
-							<a href="api/logout" className="signin">
+							<a href="/api/logout" className="signin">
 								Logout
 							</a>
 						</li>

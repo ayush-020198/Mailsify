@@ -16,7 +16,7 @@ export default [
 	},
 	{
 		label: 'Recipient List',
-		name: 'emails',
+		name: 'recipients',
 		noValue: 'You must enter a valid email!',
 	},
 ];

@@ -1,11 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import formFields from './formFields';
+import _ from 'lodash';
 
-const SurveyFormReview = ({ onCancel }) => {
+const SurveyFormReview = ({ onCancel, formValues }) => {
+	const reviewFields = _.map(formFields, ({ name, label }) => {
+		return (
+			<div>
+				<label>{label}</label>
+				<div>{name}</div>
+			</div>
+		);
+	});
+
 	return (
 		<div>
 			<h5>Please Review Your Form</h5>
-			<button className="white darken-3 btn" onClick={onCancel}>
+			{reviewFields}
+			<button className="white-text btn1" onClick={onCancel}>
 				Back
 			</button>
 		</div>

@@ -3,7 +3,9 @@ const requireLogin = require('../middlewares/requireLogin');
 const requireCredits = require('../middlewares/requireCredits');
 const Mailer = require('../services/Mailer');
 const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
-
+const _ = require('lodash');
+const { Path } = require('path-parser');
+const { URL } = require('url');
 const Survey = mongoose.model('surveys');
 
 module.exports = (app) => {
@@ -12,8 +14,11 @@ module.exports = (app) => {
 	});
 
 	app.post('/api/surveys/webhooks', (req, res) => {
-		console.log(req.body);
-		res.send({});
+		const events = _.map(req.body, (event) => {
+			const pathname = new URL(event.url).pathname;
+			const p = new Path('/api/surveys/:surveyId/:choice');
+			console.log(p.test(pathname));
+		});
 	});
 
 	app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {

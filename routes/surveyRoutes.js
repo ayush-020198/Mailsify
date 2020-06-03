@@ -4,19 +4,27 @@ const requireCredits = require('../middlewares/requireCredits');
 const Mailer = require('../services/Mailer');
 const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
 const _ = require('lodash');
-const { Path } = require('path-parser');
+const Path = require('path-parser');
 const { URL } = require('url');
 const Survey = mongoose.model('surveys');
 
 module.exports = (app) => {
-	app.get('/api/surveys/thanks', (req, res) => {
+	app.get('/api/surveys', requireLogin, async (req, res) => {
+		const surveys = await Survey.find({ _user: req.user.id }).select({
+			recipients: false,
+		});
+		res.send(surveys);
+	});
+
+	app.get('/api/surveys/:surveyId/:choice', (req, res) => {
 		res.send('Thank you for taking the time');
 	});
 
 	app.post('/api/surveys/webhooks', (req, res) => {
+		const p = new Path('/api/surveys/:surveyId/:choice');
+
 		_.chain(req.body)
 			.map(({ email, url }) => {
-				const p = new Path('/api/surveys/:surveyId/:choice');
 				const match = p.test(new URL(url).pathname);
 				if (match) {
 					return {
@@ -38,7 +46,8 @@ module.exports = (app) => {
 					},
 					{
 						$inc: { [choice]: 1 },
-						$set: { 'recipients.set.$.responded': true },
+						$set: { 'recipients.$.responded': true },
+						lastResponded: new Date(),
 					}
 				).exec();
 			})

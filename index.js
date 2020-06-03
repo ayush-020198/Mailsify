@@ -8,6 +8,8 @@ require('./models/users');
 require('./models/surveys');
 require('./services/passport');
 
+mongoose.Promise = global.Promise;
+
 mongoose.connect(keys.mongooseURI);
 
 const app = express();

@@ -4,7 +4,7 @@ Client-side of the Mailsify Webapp.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-##Snapshots
+## Snapshots
 ![Mailsifyimg1](https://user-images.githubusercontent.com/56764533/85940845-9f4cac80-b93c-11ea-9def-832bd245df3d.png)
 ![Mailsifyimg2](https://user-images.githubusercontent.com/56764533/85940854-ac699b80-b93c-11ea-8310-5ed7b48e576e.png)
 ![Mailsifyimg3](https://user-images.githubusercontent.com/56764533/85940874-d28f3b80-b93c-11ea-9de9-940d3613f869.png)

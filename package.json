@@ -19,7 +19,7 @@
 		"cookie-session": "^1.4.0",
 		"express": "^4.17.1",
 		"localtunnel": "^2.0.0",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.19",
 		"mongoose": "^5.9.17",
 		"nodemon": "^2.0.4",
 		"passport": "^0.4.1",

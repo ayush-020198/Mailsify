@@ -1,4 +1,4 @@
-# Mailsifym
+# Mailsify
 
 A tool to provide start-up companies with survey service
 
